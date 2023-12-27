@@ -35,6 +35,7 @@ const LoginForm = () => {
       console.log("Somint went Wrong", error);
     }
   };
+  
   const provider = new GoogleAuthProvider();
   const signInWithGoogle = async () => {
     try {

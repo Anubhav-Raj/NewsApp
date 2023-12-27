@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { MdKeyboardArrowDown } from "react-icons/md";
 import { useRouter } from "next/router";
 import { useAuth } from "@/firebase/auth";
 import { FaHeart } from "react-icons/fa";
@@ -20,7 +18,7 @@ const Header = () => {
   }, [authUser, inLoading]);
 
   const favoritesDropdownHandler = () => {
-    setFavoritesDropdown((curState) => !curState);
+    setFavoritesDropdown(!favoritesDropdown);
   };
 
   const { favorites } = useFavorites();

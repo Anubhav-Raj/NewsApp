@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // components/ArticleModal.js
 import React, { useRef, useEffect } from "react";
 

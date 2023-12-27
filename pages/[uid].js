@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 // pages/[uid].js
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -25,7 +26,6 @@ const NewsDetailPage = () => {
   return (
     <>
       <Header />
-
       <div className=" bg-white bg-opacity-75 flex items-center justify-center min-h-screen">
         <div className="bg-white p-8 rounded-lg max-w-2xl overflow-y-auto relative">
           <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
