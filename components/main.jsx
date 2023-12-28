@@ -46,6 +46,7 @@ const Main = () => {
         );
         const result = await response.json();
         setData(result.articles);
+         console.log(result.articles)
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
