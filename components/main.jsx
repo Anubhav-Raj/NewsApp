@@ -41,10 +41,9 @@ const Main = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://newsapi.org/v2/everything?q=Apple&from=2023-12-01&sortBy=popularity&apiKey=9f1906d5ce6d4d6ca9d1d51c25c0d3c8"
-        );
+        const response = await fetch("http://localhost:3001/api/news");
         const result = await response.json();
+        console.log(result);
         setData(result.articles);
         setLoading(false);
       } catch (error) {
