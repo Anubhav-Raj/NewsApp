@@ -19,10 +19,6 @@ const NewsDetailPage = () => {
     setArticle(selectedArticle);
   }, [uid]);
 
-  if (!article) {
-    return <Loader />;
-  }
-
   return (
     <>
       <Header />

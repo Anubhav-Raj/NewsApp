@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import { FiSearch } from "react-icons/fi";
 
 const Hero = () => {
   return (

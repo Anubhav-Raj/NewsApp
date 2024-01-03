@@ -1,5 +1,5 @@
 import { FavoritesProvider } from "@/firebase/FavoritesContext";
-import { AuthUserProvider } from "@/firebase/auth";
+// import { AuthUserProvider } from "@/firebase/auth";
 import "@/styles/globals.css";
 import Head from "next/head";
 
@@ -9,11 +9,9 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title> News App</title>
       </Head>
-      <AuthUserProvider>
-        <FavoritesProvider>
-          <Component {...pageProps} />
-        </FavoritesProvider>
-      </AuthUserProvider>
+      <FavoritesProvider>
+        <Component {...pageProps} />
+      </FavoritesProvider>
     </>
   );
 }
