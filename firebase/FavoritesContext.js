@@ -14,7 +14,9 @@ export const FavoritesProvider = ({ children }) => {
 
   // Update localStorage whenever favorites change
   useEffect(() => {
-    localStorage.setItem("favorites", JSON.stringify(favorites));
+    if (typeof localStorage !== "undefined") {
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+    }
   }, [favorites]);
 
   const toggleFavorite = (article) => {

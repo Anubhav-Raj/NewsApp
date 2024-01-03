@@ -5,6 +5,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { FaHeart, FaList, FaRegHeart, FaTh } from "react-icons/fa";
 import ArticleModal from "./ArticleModal";
 import { useFavorites } from "@/firebase/FavoritesContext";
+import Loader from "./loader";
 
 const Main = () => {
   // State for managing favorites
@@ -77,6 +78,10 @@ const Main = () => {
   const toggleGridView = () => {
     setIsGridView((prev) => !prev);
   };
+
+  if (!data) {
+    return <Loader />;
+  }
 
   return (
     <>
